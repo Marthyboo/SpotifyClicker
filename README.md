@@ -1,0 +1,2 @@
+# SpotifyClicker
+Windows Advanced Autoclicker
