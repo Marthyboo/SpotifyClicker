@@ -9,6 +9,7 @@ Original Project Was Made By rmdezz, But heavily Improved.
 - Easily compile project with no error like previously
 - Disguised App As Spotify
 - Changed Theme
+- Removed 2 False Flags
 -----------------
 
 # Features
