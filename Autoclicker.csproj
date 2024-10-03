@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\ILMerge.3.0.41\build\ILMerge.props" Condition="Exists('packages\ILMerge.3.0.41\build\ILMerge.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishSingleFile>true</PublishSingleFile>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3BD4F203-CDC1-4199-A132-3F630FF966B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Autoclicker</RootNamespace>
+    <AssemblyName>Spotify</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <LangVersion>latest</LangVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>10.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>10</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IconGroup126.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>EA153B7EC6C0FB21EA117EA6A948CA6F2CE12913</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Autoclicker_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+  
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\..\..\..\Windows\Microsoft.NET\Framework64\v4.0.30319\Accessibility.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ControlzEx.3.0.2.4\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Dragablz, Version=0.0.3.203, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dragablz.0.0.3.203\lib\net45\Dragablz.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.1.6.5\lib\net47\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.0.3.2, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignColors.2.0.3\lib\net452\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.2.1.2, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignThemes.4.2.1\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Console, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\..\..\..\Windows\Microsoft.NET\Framework64\v4.0.30319\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\ControlzEx.3.0.2.4\lib\net462\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="src\clicker\Clicker.cs" />
+    <Compile Include="src\clicker\ClickerData.cs" />
+    <Compile Include="src\clicker\ClickerUtil.cs" />
+    <Compile Include="src\clicker\Constants.cs" />
+    <Compile Include="src\clicker\extra\BlockhitUtil.cs" />
+    <Compile Include="src\clicker\extra\BreakBlocksUtil.cs" />
+    <Compile Include="src\clicker\extra\JitterUtil.cs" />
+    <Compile Include="src\clicker\extra\RefillUtil.cs" />
+    <Compile Include="src\clicker\left clicker\LeftClicker.cs" />
+    <Compile Include="src\clicker\left clicker\LeftClickerPauseDelay.cs" />
+    <Compile Include="src\clicker\left clicker\LeftClickerUtil.cs" />
+    <Compile Include="src\clicker\left clicker\LeftClickerValues.cs" />
+    <Compile Include="src\clicker\ms\MillisecondsUtil.cs" />
+    <Compile Include="src\clicker\right clicker\RightClicker.cs" />
+    <Compile Include="src\clicker\right clicker\RightClickerUtil.cs" />
+    <Compile Include="src\clicker\right clicker\RightClickerValues.cs" />
+    <Compile Include="src\components\color\ColorConversion.cs" />
+    <Compile Include="src\components\color\ColorPicker.cs" />
+    <Compile Include="src\components\color\ColorPickerUtil.cs" />
+    <Compile Include="src\components\color\SetComponentsColor.cs" />
+    <Compile Include="src\components\events\color\RainbowColorEvents.cs" />
+    <Compile Include="src\components\events\ComponentsEvents.cs" />
+    <Compile Include="src\components\events\ComponentsEventsUtil.cs" />
+    <Compile Include="src\components\events\left clicker\LeftClickerEvents.cs" />
+    <Compile Include="src\components\events\left clicker\LeftClickerSoundEvents.cs" />
+    <Compile Include="src\components\events\right Clicker\RightClickerEvents.cs" />
+    <Compile Include="src\components\events\right Clicker\RightClickerSoundEvents.cs" />
+    <Compile Include="src\display\DisplayLeftClickerValues.cs" />
+    <Compile Include="src\display\DisplayRightClickerValues.cs" />
+    <Compile Include="src\display\DisplayValues.cs" />
+    <Compile Include="src\display\MinecraftUtil.cs" />
+    <Compile Include="src\hooks\KeyboardHook.cs" />
+    <Compile Include="src\hooks\KeyboardUtil.cs" />
+    <Compile Include="src\hooks\MouseHook.cs" />
+    <Compile Include="src\mouse control\MouseControl.cs" />
+    <Compile Include="src\mouse control\MouseControlUtil.cs" />
+    <Compile Include="src\mouse control\MoveMouseUtil.cs" />
+    <Compile Include="src\random generator\Random.cs" />
+    <Compile Include="src\settings\SettingsUtil.cs" />
+    <Compile Include="src\sound\FadeOutSound.cs" />
+    <Compile Include="src\sound\ShuffleSounds.cs" />
+    <Compile Include="src\sound\SoundData.cs" />
+    <None Include="Autoclicker_TemporaryKey.pfx" />
+    <None Include="Resources\albypro_gb.wav" />
+    <None Include="Resources\albypro_gb2.wav" />
+    <None Include="Resources\albypro_gb3.wav" />
+    <None Include="Resources\albypro_gb4.wav" />
+    <None Include="Resources\albypro_gb5.wav" />
+    <None Include="Resources\deathadder.wav" />
+    <None Include="Resources\drag_click.wav" />
+    <None Include="Resources\eight_dragclick.wav" />
+    <None Include="Resources\eight_telly.wav" />
+    <None Include="Resources\eigth_butterfly.wav" />
+    <None Include="Resources\fifth_butterfly.wav" />
+    <None Include="Resources\fifth_click.wav" />
+    <None Include="Resources\fifth_dragclick.wav" />
+    <None Include="Resources\fifth_godbridge.wav" />
+    <None Include="Resources\fifth_jitter.wav" />
+    <None Include="Resources\fifth_normal_click.wav" />
+    <None Include="Resources\fifth_silence.wav" />
+    <None Include="Resources\fifth_telly.wav" />
+    <None Include="Resources\first_breezily.wav" />
+    <None Include="Resources\first_butterfly.wav" />
+    <None Include="Resources\first_click.wav" />
+    <None Include="Resources\first_dragclick.wav" />
+    <None Include="Resources\first_glorious_model1.wav" />
+    <None Include="Resources\first_godbridge.wav" />
+    <None Include="Resources\first_jitter.wav" />
+    <None Include="Resources\first_left_normal_click.wav" />
+    <None Include="Resources\first_moonwalk.wav" />
+    <None Include="Resources\first_normal_click.wav" />
+    <None Include="Resources\first_silence.wav" />
+    <None Include="Resources\first_telly.wav" />
+    <None Include="Resources\fourth_butterfly.wav" />
+    <None Include="Resources\fourth_click.wav" />
+    <None Include="Resources\fourth_dragclick.wav" />
+    <None Include="Resources\fourth_godbridge.wav" />
+    <None Include="Resources\fourth_jitter.wav" />
+    <None Include="Resources\fourth_left_normal_click.wav" />
+    <None Include="Resources\fourth_normal_click.wav" />
+    <None Include="Resources\fourth_silence.wav" />
+    <None Include="Resources\fourth_telly.wav" />
+    <None Include="Resources\full_butterfly.wav" />
+    <None Include="Resources\full_butterfly_final.wav" />
+    <None Include="Resources\full_butterfly_first.wav" />
+    <None Include="Resources\full_butterfly_sound_second.wav" />
+    <None Include="Resources\full_butterfly_sound_third.wav" />
+    <None Include="Resources\full_drag_click.wav" />
+    <None Include="Resources\full_drag_click_2variant.wav" />
+    <None Include="Resources\full_drag_click_3variant.wav" />
+    <None Include="Resources\full_full_godbridge_sound.wav" />
+    <None Include="Resources\full_godbridge_sound.wav" />
+    <None Include="Resources\full_godbridge_sound2.wav" />
+    <None Include="Resources\full_godbridge_sound_2variant.wav" />
+    <None Include="Resources\full_godbridge_sound_3variant.wav" />
+    <None Include="Resources\full_godbridge_sound_second.wav" />
+    <None Include="Resources\full_godbridge_sound_third.wav" />
+    <None Include="Resources\full_telly_sound.wav" />
+    <None Include="Resources\full_telly_sound_2variant.wav" />
+    <None Include="Resources\full_telly_sound_3variant.wav" />
+    <None Include="Resources\g303.wav" />
+    <None Include="Resources\g3032.wav" />
+    <None Include="Resources\G502.wav" />
+    <None Include="Resources\gb_sound.wav" />
+    <None Include="Resources\glorious_model_final.wav" />
+    <None Include="Resources\godbridge_sound.wav" />
+    <None Include="Resources\godbridge_sound2.wav" />
+    <None Include="Resources\godbridge_sound2_corrected.wav" />
+    <None Include="Resources\godbridge_sound_fn.wav" />
+    <None Include="Resources\GPro.wav" />
+    <None Include="Resources\hp.wav" />
+    <None Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Include="Resources\IconsNonShared.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Include="Resources\low_butterfly.wav" />
+    <None Include="Resources\microsoft.wav" />
+    <None Include="Resources\ninth_butterfly.wav" />
+    <None Include="Resources\ninth_dragclick.wav" />
+    <None Include="Resources\normal.wav" />
+    <None Include="Resources\octavo_click.wav" />
+    <None Include="Resources\octavo_silencio.wav" />
+    <None Include="Resources\oldmouse.wav" />
+    <None Include="Resources\second_breezily.wav" />
+    <None Include="Resources\second_butterfly.wav" />
+    <None Include="Resources\second_click.wav" />
+    <None Include="Resources\second_dragclick.wav" />
+    <None Include="Resources\second_glorious_model1.wav" />
+    <None Include="Resources\second_godbridge.wav" />
+    <None Include="Resources\second_godbridge_sound.wav" />
+    <None Include="Resources\second_jitter.wav" />
+    <None Include="Resources\second_left_normal_click.wav" />
+    <None Include="Resources\second_moonwalk.wav" />
+    <None Include="Resources\second_normal_click.wav" />
+    <None Include="Resources\second_silence.wav" />
+    <None Include="Resources\second_telly.wav" />
+    <None Include="Resources\septimo_click.wav" />
+    <None Include="Resources\septimo_silence.wav" />
+    <None Include="Resources\seventh_butterfly.wav" />
+    <None Include="Resources\seventh_dragclick.wav" />
+    <None Include="Resources\seventh_telly.wav" />
+    <None Include="Resources\sixth_butterfly.wav" />
+    <None Include="Resources\sixth_click.wav" />
+    <None Include="Resources\sixth_dragclick.wav" />
+    <None Include="Resources\sixth_jitter.wav" />
+    <None Include="Resources\sixth_normal_click.wav" />
+    <None Include="Resources\sixth_silence.wav" />
+    <None Include="Resources\sixth_telly.wav" />
+    <None Include="Resources\spacebar_sound.wav" />
+    <None Include="Resources\third_breezily.wav" />
+    <None Include="Resources\third_butterfly.wav" />
+    <None Include="Resources\third_click.wav" />
+    <None Include="Resources\third_dragclick.wav" />
+    <None Include="Resources\third_godbridge.wav" />
+    <None Include="Resources\third_jitter.wav" />
+    <None Include="Resources\third_left_normal_click.wav" />
+    <None Include="Resources\third_moonwalk.wav" />
+    <None Include="Resources\third_normal_click.wav" />
+    <None Include="Resources\third_silence.wav" />
+    <None Include="Resources\third_telly.wav" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="5.7.0">
+      <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>compile</ExcludeAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Dragablz">
+      <Version>0.0.3.234</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.RegularExpressions">
+      <Version>4.3.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Entypo-license.txt" />
+    <Resource Include="Resources\Entypo.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\silence_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IconGroup126.ico" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\MaterialDesignThemes.4.2.1\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.2.1\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+    </PropertyGroup>
+  </Target>
+</Project>
